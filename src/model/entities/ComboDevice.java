@@ -1,23 +1,27 @@
 package model.entities;
 
-public class ComboDevice {
+import model.entities.interfaces.Printer;
+import model.entities.interfaces.Scanner;
 
-    private String serialNumber;
+public class ComboDevice extends Device implements Scanner, Printer {
 
-    public ComboDevice(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
+   public ComboDevice(String serialNumber){
+       super(serialNumber);
+   }
 
-    public String getSerialNumber() {
-        return serialNumber;
-    }
+   @Override
+   public void processDoc(String doc){
+       System.out.println("Combo processing: " + doc);
+   }
 
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
+    @Override
+   public void print(String doc){
+       System.out.println("Combo printing: " + doc);
+   }
 
-    public void processDoc(String doc){
-
-    }
-
+    @Override
+   public String scan(){
+       return "Combo scan result";
+   }
 }
+

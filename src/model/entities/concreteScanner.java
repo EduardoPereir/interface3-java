@@ -1,10 +1,8 @@
 package model.entities;
 
-import org.w3c.dom.ls.LSOutput;
+public class concreteScanner extends Device{
 
-public class Scanner extends Device{
-
-    public Scanner(String serialNumber) {
+    public concreteScanner(String serialNumber) {
         super(serialNumber);
     }
 
@@ -13,7 +11,7 @@ public class Scanner extends Device{
         System.out.println("Scanner processing: " + doc );
     }
 
-    public String scam(){
+    public String scan(){
         return "Scanned content";
     }
 

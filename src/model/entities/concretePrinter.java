@@ -1,8 +1,8 @@
 package model.entities;
 
-public class Printer extends Device {
+public class concretePrinter extends Device {
 
-    public Printer( String serialNumber){
+    public concretePrinter(String serialNumber){
         super(serialNumber);
     }
 
